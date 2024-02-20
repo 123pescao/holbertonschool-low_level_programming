@@ -14,8 +14,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	last_digit = n % 10;
 
-	printf("Last digit of %d" is %d, n, last line);
-	
+	printf("Last digit of %d is %d", n, last line);
 	if (n > 5)
 	{
 		printf(" and is grater than 5\n");
