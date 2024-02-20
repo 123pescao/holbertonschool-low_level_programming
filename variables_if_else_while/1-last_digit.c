@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /*
  *main- Entry point
  *
@@ -8,14 +9,15 @@
  */
 int main(void)
 {
-	int n;
+	int n, last_digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	last_digit = n % 10;
-
-	printf("Last digit of %d is %d", n, last line);
-	if (last _digit > 5)
+	
+	printf("Last digit of %d is %d", n, last_digit);
+	
+	if (last_digit > 5)
 	{
 	printf(" and is grater than 5\n");
 	}
