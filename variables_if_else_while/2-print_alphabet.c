@@ -1,10 +1,13 @@
 #include <stdio.h>
-
+/**
+ * main- Entry Point
+ *
+ */
 int main(void)
 
 	char letter;
 
-	for (letter = 'a'; letter<='z'; letter++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 {
 	putchar(letter);
 }
