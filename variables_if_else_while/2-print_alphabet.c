@@ -1,10 +1,12 @@
 #include <stdio.h>
+
 /**
  * main- Entry Point
  *
  */
-int main(void)
 
+int main(void)
+{
 	char letter;
 
 	for (letter = 'a'; letter <= 'z'; letter++)
