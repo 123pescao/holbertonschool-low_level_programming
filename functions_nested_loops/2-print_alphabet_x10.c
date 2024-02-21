@@ -1,6 +1,6 @@
-#insert "main.h"
+#include "main.h"
 /**
- * Print_alphab 10 times the alphabet, in lowercase, followed by a new line.
+ *print_alphabet_x10- Prints alphabet 10 times the alphabet, in lowercase, followed by a new line.
  *
  * Return - (0)
  */
