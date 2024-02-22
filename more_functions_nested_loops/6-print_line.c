@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * print_line- Draws a straight line in terminal.
+ * @n: number of times
+ *
  */
 void print_line(int n)
 {
@@ -12,6 +14,6 @@ void print_line(int n)
 		{
 			_putchar('_');
 		}
-		_putchar('\n');
 	}
+		_putchar('\n');
 }
