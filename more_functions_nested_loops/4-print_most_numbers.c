@@ -8,7 +8,7 @@ void print_most_numbers(void)
 
 	for (letter = '0'; letter <= '9'; letter++)
 	{
-		if (letter != '2' || letter != '4')
+		if (letter != '2' && letter != '4')
 	{
 		_putchar(letter);
 	}
