@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_most_numbers- prints the numbers
+ *print_most_numbers- prints the numbers
  */
 void print_most_numbers(void)
 {
@@ -10,6 +10,6 @@ void print_most_numbers(void)
 	if (letter != '2' || letter != '4')
 	{
 		_putchar(letter);
-		_putchar('\n');
 	}
+		_putchar('\n');
 }
