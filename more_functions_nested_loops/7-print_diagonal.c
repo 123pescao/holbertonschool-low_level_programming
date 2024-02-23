@@ -2,6 +2,7 @@
 /**
  *print_diagonal- draws a diagonal line on the terminal.
  *@n: Number of times the character is printed.
+ *
  */
 void print_diagonal(int n)
 {
@@ -16,11 +17,11 @@ void print_diagonal(int n)
 				_putchar(' ');
 			}
 			_putchar('\\');
-			if (a < n - 1)
-			{
-				_putchar('\n');
-			}
+			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
 }
