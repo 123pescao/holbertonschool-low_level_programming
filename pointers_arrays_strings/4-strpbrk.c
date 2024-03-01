@@ -5,7 +5,7 @@
  *@s: source string
  *@accept: searching string
  *
- * Return:
+ * Return: New string
  */
 char *_strpbrk(char *s, char *accept)
 {
