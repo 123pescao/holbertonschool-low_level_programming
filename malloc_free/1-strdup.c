@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup- returns pointer to a new string which is duplicate for str
- * @str: char pointer
+ *_strdup- returns pointer to a new string which is duplicate for str
+ *@str: char pointer
  *
- * Return: pointer to a new string
+ *Return: pointer to a new string
  */
 char *_strdup(char *str)
 {
@@ -14,24 +14,22 @@ char *_strdup(char *str)
 	int len;
 	char *s;
 
-	if (str = 0)
-		return (0);
+	if (str = NULL)
+	{
+		return (NULL);
+	}
 
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	len++;
+	for (len = 0; str[len]; len++)
 
-	s = malloc(len * sizeof(char));
-	if (s ==0)
-		return (0);
+	s = (char *)malloc((len + 1) * sizeof(char));
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 
-	i = 0;
-	while (str[i] != '\0')
+	for (int i = 0; i <= len; i++)
 	{
 		s[i] = str[i];
-		i++;
 	}
-	s[i] = '\0';
 	return (s);
 }
