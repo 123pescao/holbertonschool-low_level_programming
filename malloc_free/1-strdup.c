@@ -1,32 +1,37 @@
-#include "holberton.h"
-#include <stdlib.h>
+#include "main.h"
+
 /**
- * _strdup - check the code for Holberton School students.
- * @str: argument for array
- * Return: Always 0.
- */
+* _strdup - returns a pointer to a newly allocated
+*space in memory, which contains a copy of the
+*string given as a parameter.
+*@str:String to be copied
+*
+*Return: NULL in case of error, pointer to allocated
+*space
+*/
+
 char *_strdup(char *str)
 {
-	char *my_array;
-	int i, len;
+	char *cpy;
+	int index, len;
 
-	my_array = malloc(sizeof(str));
-
-	i = len = 0;
-	while (str[i] != '\0')
-	{
-		len++;
-		i++;
-	}
-
-	if (my_array == NULL)
+	if (str == NULL)
 		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
+
+	for (index = 0; str[index]; index++)
+		len++;
+	cpy = malloc(sizeof(char) * (len + 1));
+
+	if (cpy == NULL)
+		return (NULL);
+
+	for (index = 0; str[index]; index++)
 	{
-		my_array[i] = str[i];
-		i++;
+		cpy[index] = str[index];
 	}
 
-	return (my_array);
+	cpy[len] = '\0';
+
+	return (cpy);
+
 }
