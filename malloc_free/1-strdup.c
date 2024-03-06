@@ -1,29 +1,32 @@
-#include "main.h"
+#include "holberton.h"
+#include <stdlib.h>
 /**
- *_strdup- creates a new array containing a copy of the given string
- *@str: pointer to the string to copy
- *
- *Return: NULL if str is NULL or if memory allocation fails,
- *otherwise return pointer to new copy
+ * _strdup - check the code for Holberton School students.
+ * @str: argument for array
+ * Return: Always 0.
  */
 char *_strdup(char *str)
 {
-	char *dup;
-	unsigned int size = 0;
+	char *my_array;
+	int i, len;
 
-	if (str)
+	my_array = malloc(sizeof(str));
+
+	i = len = 0;
+	while (str[i] != '\0')
 	{
-		while (str[size++])
-			;
-		
-	   dup = malloc(sizeof(char) *size);
-	   if (dup)
-	   {
-		   while (size--)
-			   dup[size] = str[size];
-
-		   return (dup);
-	   }
+		len++;
+		i++;
 	}
-	return (NULL);
+
+	if (my_array == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		my_array[i] = str[i];
+		i++;
+	}
+
+	return (my_array);
 }
