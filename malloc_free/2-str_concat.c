@@ -1,54 +1,36 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+
 /**
- *str_concat- two strng
- *@s1: first one
- *@s2: second one
- *
- *Return: result
+ * str_concat - concatenate strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: NULL if failure
  */
 char *str_concat(char *s1, char *s2)
 {
-	int a = 0, b = 0, c = 0, d = 0;
 	char *s;
+	int a, b, c, d;
 
-	if (s1 == NULL)
-	{
+	if (s1 == 0)
 		s1 = "";
-	}
-	if (s2 == NULL)
-	{
+	if (s2 == 0)
 		s2 = "";
-	}
-	while (s1[a])
-	{
-		a++;
-	}
-	while (s2[b])
-	{
-		b++;
-	}
-	d = a + b;
-	s = malloc((sizeof(char) * d) + 1);
-
-	if (s == NULL)
-	{
+	for (a = 0; s1[a] != '\0'; a++)
+		;
+	for (b = 0; s2[b] != '\0'; b++)
+		;
+	b++;
+	s = malloc(a * sizeof(*s1) + b * sizeof(*s2));
+	if (s == 0)
 		return (NULL);
-	}
-	b = 0;
-	while (c < d)
+	for (c = 0, d = 0; c < a + b; c++)
 	{
-		if (c <= a)
-		{
+		if (c < a)
 			s[c] = s1[c];
-		}
-		if (c >= a)
-		{
-			s[c] = s2[b];
-			b++;
-		}
-		c++;
+		else
+			s[c] = s2[d++];
 	}
-	s[c] = '\0';
 	return (s);
 }
